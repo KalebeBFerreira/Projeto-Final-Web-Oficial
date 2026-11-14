@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fundo: #080d18;
+    --fundo-card: #101a2b;
+    --azul: #168bff;
+    --azul-claro: #64b5ff;
+    --texto: #e8eef8;
+    --texto-secundario: #a8b5c9;
+    --borda: #203653;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    padding: 40px 20px;
+}
+
+
+#titulo {
+    text-align: center;
+    color: var(--azul-claro);
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+#titulo::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--azul);
+    margin: 12px auto 35px;
+    border-radius: 5px;
+}
+
+
+section {
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 28px;
+    background-color: var(--fundo-card);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+section:hover {
+    border-color: var(--azul);
+    transform: translateY(-3px);
+}
+
+
+
+#subtituloPrincipal,
+.titulosPagina,
+section > h3 {
+    color: var(--azul-claro);
+    font-size: 1.45rem;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+
+p,
+.texto {
+    color: var(--texto-secundario);
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+strong {
+    color: var(--azul-claro);
+}
+
+
+.cardUtilidade1,
+.cardUtilidade2,
+.cardUtilidade3 {
+    background-color: #0b1322;
+    border-left: 4px solid var(--azul);
+    border-radius: 8px;
+    padding: 18px;
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.cardUtilidade1 p,
+.cardUtilidade2 p,
+.cardUtilidade3 p {
+    margin-bottom: 8px;
+}
+
+.btn-voltar {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: var(--azul);
+    font-weight: bold;
+    transition: color 0.3s;
+
+    width: 50px;
+}
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 20px auto 0;
+    border-radius: 10px;
+    border: 1px solid var(--borda);
+}
+
+
+@media (max-width: 600px) {
+    body {
+        padding: 25px 12px;
+    }
+
+    #titulo {
+        font-size: 2.2rem;
+    }
+
+    section {
+        padding: 20px;
+        margin: 18px auto;
+    }
+
+    #subtituloPrincipal,
+    .titulosPagina,
+    section > h3 {
+        font-size: 1.2rem;
+    }
+
+    p,
+    .texto {
+        font-size: 0.95rem;
+    }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carboidratos</title>
+
+    <link rel="stylesheet" href="assets/css/carboidratos.css">
+    <script src="assets/script.js" defer></script>
+
+    <link rel="icon" type="image/png" href="assets/img/macrolab-favicon.png">
+
+</head>
+<body>
+    <h1>Carboidratos</h1>
+
+    <section>
+            <h2>Modo de visualização</h2>
+
+            <button onclick="mudarTema()">
+                Mudar modo claro/escuro
+            </button>
+    </section>
+
+    <section class="definicao">
+        <h2>O que são?</h2>
+        <p> Os carboidratos são nutrientes formados por carbono, hidrogênio e oxigênio, 
+            e têm como principal função fornecer energia para o organismo. 
+            Eles são a principal fonte de energia do corpo, especialmente para o cérebro e os músculos. 
+            Além disso, participam de outras funções importantes, como a estrutura celular e o armazenamento de energia.
+            Estão presente em muitos alimentos que consumimos todos os dias, como pães, arroz, massas, frutas, legumes e doces.
+        </p>
+
+        <div class="formula">
+          C₆H₁₂O₆
+
+          <p>Fórmula molecular da glicose</p>
+        </div>
+    </section>
+
+    <section class="classificacao">
+        <h2>Classificação dos carboidratos</h2>
+        <p> Os carboidratos podem ser divididos em três grupos principais, 
+            de acordo com o número de unidades de açúcar que possuem em sua estrutura. Clique nos botões para conhecer:</p>
+
+        <button onclick="mostrar('monossacarideo')">
+            Monossacarídeos
+        </button> 
+
+        <button onclick="mostrar('dissacarideo')">
+            Dissacarídeos
+        </button>
+
+        <button onclick="mostrar('polissacarideo')">
+            Polissacarídeos
+        </button>  
+
+        <div id="monossacarideo"> 
+            <h3>Monossacarídeos</h3>
+            <p> São os carboidratos mais simples, formados por uma única unidade de açúcar.
+                São rapidamente absorvidos pelo organismo.
+                Função: fornecem energia imediata para as células.</p>
+            <h3>Glicose</h3>
+            <p> É utilizada pelas células para produzir
+                energia durante a respiração celular.</p>
+            <h3>Frutose</h3>
+            <p> É encontrada em frutas e também pode
+                fornecer energia para o organismo.</p>
+        </div>
+
+        <div id="dissacarideo"> 
+            <h3>Dissacarídeos</h3>
+            <p> São formados por duas unidades de monossacarídeos ligadas entre si.
+                Função: fornecer energia após serem digeridos em açúcares mais simples.</p>
+            <h3>Sacarose</h3>
+            <p> É o açúcar comum, encontrado principalmente
+                na cana-de-açúcar e na beterraba.</p>
+            <h3>Lactose</h3>
+            <p> É o açúcar presente no leite.</p>
+        </div>
+
+        <div id="polissacarideo"> 
+            <h3>Polissacarídeos</h3>
+            <p>  São carboidratos formados por muitas unidades de açúcar ligadas entre si.
+                Função: armazenar energia; o amido é uma reserva energética vegetal, 
+                enquanto o glicogênio é uma reserva energética dos animais e dos fungos.</p>
+            <h3>Amido</h3>
+            <p> É uma reserva de energia das plantas.
+                Está presente no arroz, na batata e na mandioca.</p>
+            <h3>Celulose</h3>
+            <p> Faz parte da parede celular dos vegetais
+                e ajuda na sustentação das plantas.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Carboidratos no cotidiano</h2>
+        <p>O arroz, o pão e a batata são alimentos ricos em amido.</p>
+        <p>Durante a digestão, o amido é quebrado em moléculas menores, que podem ser utilizadas pelo organismo.</p>
+    
+    </section>
+
+    <section>
+        <h2>Você sabia?</h2>
+        <p>
+            O amido e a celulose são formados por
+            unidades de glicose, mas possuem funções
+            diferentes nas plantas.
+        </p>
+    </section>
+    
+</body>
+</html>

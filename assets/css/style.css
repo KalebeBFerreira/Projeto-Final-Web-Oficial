@@ -1,0 +1,158 @@
+/* VARIÁVEIS CSS */
+:root {
+  /* CORES DE FUNDO */
+  --bg-primary: #070f24;
+  --bg-card: #7280a1;
+
+  /* CORES PRINCIPAIS */
+  --cor-principal: #0096ff;
+  --cor-secundaria: #48cae4;
+  --cor-destaque: #ffffff;
+
+  /* CORES DE TEXTO */
+  --texto-principal: #ffffff;
+  --texto-secundario: #94a3b8;
+  --texto-destaque: #000000;
+}
+
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* CRIA UMA CAIXA AO REDOR DE TODOS OS ELEMENTOS */
+}
+
+body {
+  background-color: var(--bg-card);
+  font-family: Arial, sans-serif;
+}
+
+/* CABEÇALHO */
+header {
+  width: 100%;
+  height: 80px;
+
+  background-color: var(--bg-primary);
+
+  justify-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 80%;
+  height: 100%;
+
+  padding: 15px 20px;
+}
+
+
+/* LOGO */
+.logo img {
+  height: 80px;
+}
+
+/* MENU PRINCIPAL */
+.menu {
+  list-style: none; /* REMOVE OS PONTOS DA LISTA */
+  
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.menu li {
+  position: relative;
+}
+
+/* ESTILO E EFEITO DA LINHA ABAIXO DOS LINKS (HOVER) */
+.menu a {
+  color: var(--texto-principal);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 0;
+  position: relative;
+  display: inline-block;
+}
+
+/* LINHA INVISÍVEL ABAIXO DO TEXTO */
+.menu a::after {
+  content: ''; /* CRIA UM ELEMENTO VIRTUAL ABAIXO DO LINK */
+
+  position: absolute;
+  width: 0;
+  height: 2px;
+
+  bottom: 0; /* POSICIONA A LINHA NA PARTE INFERIOR DO LINK */
+  left: 0; /* ALINHA A LINHA AO LADO ESQUERDO DO LINK */
+
+  background-color: var(--cor-secundaria);
+  transition: width 0.3s ease; /* ANIMAÇÃO SUAVE AO PASSAR O MOUSE */
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+.menu a:hover::after {
+  width: 100%;
+}
+
+/* SUBMENU (MACROMOLÉCULAS) */
+.menu .submenu-list {
+  list-style: none;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background-color: var(--bg-primary);
+  min-width: 190px;
+
+  display: none; /* OCULTO POR PADRÃO */
+  flex-direction: column;
+
+  border-radius: 6px;
+  padding: 10px;
+
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4); /* SOMBRA PARA DAR PROFUNDIDADE */
+  z-index: 100; /* GARANTE QUE O SUBMENU FIQUE ACIMA DE OUTROS ELEMENTOS */
+}
+
+/* EXIBE O SUBMENU AO PASSAR O MOUSE */
+.menu .submenu:hover .submenu-list {
+  display: flex;
+}
+
+/* ITENS DO SUBMENU */
+.menu .submenu-list li {
+  margin-bottom: 5px;
+}
+
+.menu .submenu-list a {
+  font-size: 14px;
+  font-weight: normal;
+  width: 100%;
+}
+
+
+@media (max-width: 768px) {
+  header {
+    height: auto;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu .submenu-list {
+    position: static; /* SUBMENU FICA DENTRO DO FLUXO NORMAL */
+    box-shadow: none; /* REMOVE A SOMBRA */
+  }
+}
