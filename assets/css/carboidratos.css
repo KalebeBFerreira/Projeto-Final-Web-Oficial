@@ -27,7 +27,7 @@ body {
     padding: 40px 20px;
 }
 
-header {
+#titulo {
     text-align: center;
     color: var(--azul-claro);
     font-size: 3rem;
@@ -35,7 +35,7 @@ header {
     margin-bottom: 15px;
 }
 
-nav {
+#titulo::after {
     content: "";
     display: block;
     width: 80px;
@@ -157,4 +157,27 @@ img {
     .texto {
         font-size: 0.95rem;
     }
+}
+
+/* TÍTULOS DENTRO DOS CARDS DOS 3 TIPOS */
+.cardUtilidade1 h3,
+.cardUtilidade2 h3,
+.cardUtilidade3 h3 {
+    color: var(--azul-claro);
+    margin-bottom: 8px;
+}
+
+/* EFEITO AO PASSAR O MOUSE NOS 3 TIPOS DE CARBOIDRATOS */
+.cardUtilidade1,
+.cardUtilidade2,
+.cardUtilidade3 {
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.cardUtilidade1:hover,
+.cardUtilidade2:hover,
+.cardUtilidade3:hover {
+    transform: translateX(10px); /* ANDA UM POUCO PARA O LADO */
+    border-left-color: var(--azul-claro);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
 }
